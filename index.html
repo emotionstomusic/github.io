@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="musicapp.css" rel="stylesheet" />
+    <title>Emotions into music</title>
+</head>
+<body>
+    <main>
+        <h1 id="title">
+            Emotions to Music Project
+        </h1>
+        <h2> Based on the use case of one of BTS members</h2>
+
+        <h4>
+            Light Version of a Prototype<br />
+            Not for commercial use<br />
+        </h4>
+
+        <!-- column 1 -->
+        <div id="wrap">
+            <div id="left_col">
+                <h3>Online Heart Rate Monitor, not to be used for medical purposes<br />Outcomes</h3>
+                <!--immitation of pulse calculation-->
+                <div id="heartMonitor">
+                    <p>Allow this website to use your webcam, then place your finger lightly over the camera and wait for the trace to stabilise.</p>
+                    <p>You will have most success when there is light behind your finger.</p>
+                    <video id="v" width="100" height="100" style="display:none" muted></video>
+                    <canvas id="c" width="100" height="100" style="display:none"></canvas>
+                    <canvas id="g" width="320" height="30"></canvas><br />
+                    <div id="bpm">--</div>
+                    <div id="copyright">
+                        <p>
+                            &copy;&nbsp;Copyright of the Online Heart Rate Monitor by <a href="https://github.com/gfwilliams">Gordon Williams</a>, 2016. <br />
+                            Any copyright is dedicated to the Public Domain. <br />
+                            <br />
+                        </p>
+                    </div>
+                </div>
+
+                <!-- for web broser so that user could manually input the pulse number -->
+                <div id="alternativestart">
+                    <article>
+                        <p><b>Alternative option:</b></p>
+                        <label for="pulse1">pulsation result 1: </label>
+                        <input id="pulse1" type="number" style="width: 55px; height: 15px; border-radius: 3px;" value="0"><br />
+                        <label for="pulse2">pulsation result 2: </label>
+                        <input id="pulse2" type="number" style="width: 55px; height: 15px; border-radius: 3px;" value="0"><br />
+                        <label for="pulse3">pulsation result 3: </label>
+                        <input id="pulse3" type="number" style="width: 55px; height: 15px; border-radius: 3px;" value="0"><br />
+                    </article>
+                </div>
+
+                <!--button to launch everything else, all the calculations and matching-->
+                <div>
+                    <p></p>
+                    <button id="match"><b>Match</b></button>
+                    <p></p>
+                </div>
+            </div>
+
+            <!-- column 2 -->
+            <div id="right_col">
+                <div id="colorresult">
+                    <!--display colors => program will specify color based on pulse result-->
+                    <article>
+                        <p><b>Colors:</b></p>
+                        <label id="color1">Color 1: <span id="cr1"></span></label><br />
+                        <label id="color2">Color 2: <span id="cr2"></span></label><br />
+                        <label id="color3">Color 3: <span id="cr3"></span></label><br />
+                    </article>
+                </div>
+
+                <div id="melodyresult">
+                    <!--display melody => program will specify note based on color result-->
+                    <article>
+                        <p><b>Melody:</b></p>
+                        <label id="note1">Note 1: <span id="mnt1" onchange="displaySound(this)"></span></label><audio id="sound1output"></audio><br />
+                        <label id="note2">Note 2: <span id="mnt2" onchange="displaySound(this)"></span></label><audio id="sound2output"></audio><br />
+                        <label id="note3">Note 3: <span id="mnt3" onchange="displaySound(this)"></span></label><audio id="sound3output"></audio><br /><br />
+
+                        <div>
+                            <table>
+                                <tr>
+                                    <td>G, bass clef => </td>
+                                    <td>
+                                    <audio id="sound1" controls="controls">
+                                        <source src="g3grey.mp3" type="audio/mpeg" />
+                                    </audio>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>D, bass clef => </td>
+                                    <td>
+                                    <audio id="sound2" controls="controls">
+                                        <source src="d3black.mp3" type="audio/mpeg" />
+                                    </audio>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>B, bass clef => </td>
+                                    <td>
+                                        <audio id="sound3" controls="controls">
+                                            <source src="b3brown.mp3" type="audio/mpeg" />
+                                        </audio>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>F, bass clef => </td>
+                                    <td>
+                                        <audio id="sound4" controls="controls">
+                                            <source src="f3blue.mp3" type="audio/mpeg" />
+                                        </audio>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>G, treble clef => </td>
+                                    <td>
+                                        <audio id="sound5" controls="controls">
+                                            <source src="g5green.mp3" type="audio/mpeg" />
+                                        </audio>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>B, treble clef => </td>
+                                    <td>
+                                        <audio id="sound6" controls="controls">
+                                            <source src="b5orange.mp3" type="audio/mpeg" />
+                                        </audio>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>F, treble clef => </td>
+                                    <td>
+                                        <audio id="sound7" controls="controls">
+                                            <source src="f-5yellow.mp3" type="audio/mpeg" />
+                                        </audio>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>E, treble clef => </td>
+                                    <td>
+                                        <audio id="sound8" controls="controls">
+                                            <source src="e5violet.mp3" type="audio/mpeg" />
+                                        </audio>
+                                    </td>
+                                </tr>
+                            </table>    
+                        </div>
+                    </article>
+                </div>
+                <div>
+                    <p>
+                        <i>P.S. Color choice is based on psychoanalysis. We are not musicians, just in case...</i>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <script src="colormelody.js"></script>
+        <script src="modernizr.custom.05819.js"></script>
+        <script src="OnlineHeartRateMonitor.js"></script>
+
+        <footer id="footer">
+            <br />
+            <h5>
+                &copy;&nbsp;Copyright by <a href="https://www.linkedin.com/in/tereza-teresa-konstari-8b9594131/">Tereza Konstari</a>, <a href="https://www.linkedin.com/in/andrii-kosenko/">Andrii Kosenko</a> 2020.<br />
+                Contact us: <a href="mailto:emotions.to.music.project@gmail.com">emotions.to.music.project@gmail.com</a><br />
+                Assisted by <a href="https://solocoder.com/">Aderson Oliveira</a>
+            </h5>
+        </footer>
+    </main>
+</body>
+</html>
