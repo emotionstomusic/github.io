@@ -76,78 +76,145 @@
                     <!--display melody => program will specify note based on color result-->
                     <article>
                         <p><b>Melody:</b></p>
-                        <label id="note1">Note 1: <span id="mnt1" onchange="displaySound(this)"></span></label><audio id="sound1output"></audio><br />
-                        <label id="note2">Note 2: <span id="mnt2" onchange="displaySound(this)"></span></label><audio id="sound2output"></audio><br />
-                        <label id="note3">Note 3: <span id="mnt3" onchange="displaySound(this)"></span></label><audio id="sound3output"></audio><br /><br />
+                        <!--<label id="note1">Note 1: <span id="mnt1" onchange="displaySound(this)"></span></label><audio id="sound1output"></audio><br />
+    <label id="note2">Note 2: <span id="mnt2" onchange="displaySound(this)"></span></label><audio id="sound2output"></audio><br />
+    <label id="note3">Note 3: <span id="mnt3" onchange="displaySound(this)"></span></label><audio id="sound3output"></audio><br /><br />-->
+                        <?php
+                        function displayNote($note){
+                        switch($note){
+                        case "D, bass clef":
+                        echo "\nD, bass clef\n";
+                        <audio id="sound2" controls="controls">
+                            <source src="d3black.mp3" type="audio/mpeg" />
+                        </audio>
+                        break;
+                        case "G, bass clef":
+                        echo "\nG, bass clef\n";
+                        <audio id="sound1" controls="controls">
+                            <source src="g3grey.mp3" type="audio/mpeg" />
+                        </audio>
+                        break;
+                        case "B, bass clef":
+                        echo "\nB, bass clef\n";
+                        <audio id="sound3" controls="controls">
+                            <source src="b3brown.mp3" type="audio/mpeg" />
+                        </audio>
+                        break;
+                        case "F, bass clef":
+                        echo "\nF, bass clef\n";
+                        <audio id="sound4" controls="controls">
+                            <source src="f3blue.mp3" type="audio/mpeg" />
+                        </audio>
+                        break;
+                        case "G, treble clef":
+                        echo "\nG, treble clef\n";
+                        <audio id="sound5" controls="controls">
+                            <source src="g5green.mp3" type="audio/mpeg" />
+                        </audio>
+                        break;
+                        case "B, treble clef":
+                        echo "\nB, treble clef\n";
+                        <audio id="sound6" controls="controls">
+                            <source src="b5orange.mp3" type="audio/mpeg" />
+                        </audio>
+                        break;
+                        case "F, treble clef":
+                        echo "\nF, treble clef\n";
+                        <audio id="sound7" controls="controls">
+                            <source src="f-5yellow.mp3" type="audio/mpeg" />
+                        </audio>
+                        break;
+                        case "E, treble clef":
+                        echo "\nE, treble clef\n";
+                        <audio id="sound8" controls="controls">
+                            <source src="e5violet.mp3" type="audio/mpeg" />
+                        </audio>
+                        break;
+                        }
+                        }
+                        ?>
+
+                        <label id="note1" for="note1">Note 1: <span id="mnt1" onchange="displaySound(this)"></span></label><audio id="sound1output"></audio><br />
+                        <label id="note2" for="note2">Note 2: <span id="mnt2" onchange="displaySound(this)"></span></label><audio id="sound2output"></audio><br />
+                        <label id="note3" for="note3">Note 3: <span id="mnt3" onchange="displaySound(this)"></span></label><audio id="sound3output"></audio><br /><br />
 
                         <div>
                             <table>
-                                <tr>
-                                    <td>G, bass clef => </td>
-                                    <td>
-                                    <audio id="sound1" controls="controls">
-                                        <source src="g3grey.mp3" type="audio/mpeg" />
-                                    </audio>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>D, bass clef => </td>
-                                    <td>
-                                    <audio id="sound2" controls="controls">
-                                        <source src="d3black.mp3" type="audio/mpeg" />
-                                    </audio>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>B, bass clef => </td>
-                                    <td>
-                                        <audio id="sound3" controls="controls">
-                                            <source src="b3brown.mp3" type="audio/mpeg" />
-                                        </audio>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>F, bass clef => </td>
-                                    <td>
-                                        <audio id="sound4" controls="controls">
-                                            <source src="f3blue.mp3" type="audio/mpeg" />
-                                        </audio>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>G, treble clef => </td>
-                                    <td>
-                                        <audio id="sound5" controls="controls">
-                                            <source src="g5green.mp3" type="audio/mpeg" />
-                                        </audio>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>B, treble clef => </td>
-                                    <td>
-                                        <audio id="sound6" controls="controls">
-                                            <source src="b5orange.mp3" type="audio/mpeg" />
-                                        </audio>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>F, treble clef => </td>
-                                    <td>
-                                        <audio id="sound7" controls="controls">
-                                            <source src="f-5yellow.mp3" type="audio/mpeg" />
-                                        </audio>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>E, treble clef => </td>
-                                    <td>
-                                        <audio id="sound8" controls="controls">
-                                            <source src="e5violet.mp3" type="audio/mpeg" />
-                                        </audio>
-                                    </td>
-                                </tr>
-                            </table>    
+                                <tr><?php displayNote($note1) ?></tr>
+                                <tr><?php displayNote($note2) ?></tr>
+                                <tr><?php displayNote($note3) ?></tr>
+                            </table>
                         </div>
+
+                        <!--<div>
+        <table>
+            <tr>
+                <td>G, bass clef => </td>
+                <td>
+                    <audio id="sound1" controls="controls">
+                        <source src="g3grey.mp3" type="audio/mpeg" />
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>D, bass clef => </td>
+                <td>
+                    <audio id="sound2" controls="controls">
+                        <source src="d3black.mp3" type="audio/mpeg" />
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>B, bass clef => </td>
+                <td>
+                    <audio id="sound3" controls="controls">
+                        <source src="b3brown.mp3" type="audio/mpeg" />
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>F, bass clef => </td>
+                <td>
+                    <audio id="sound4" controls="controls">
+                        <source src="f3blue.mp3" type="audio/mpeg" />
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>G, treble clef => </td>
+                <td>
+                    <audio id="sound5" controls="controls">
+                        <source src="g5green.mp3" type="audio/mpeg" />
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>B, treble clef => </td>
+                <td>
+                    <audio id="sound6" controls="controls">
+                        <source src="b5orange.mp3" type="audio/mpeg" />
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>F, treble clef => </td>
+                <td>
+                    <audio id="sound7" controls="controls">
+                        <source src="f-5yellow.mp3" type="audio/mpeg" />
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>E, treble clef => </td>
+                <td>
+                    <audio id="sound8" controls="controls">
+                        <source src="e5violet.mp3" type="audio/mpeg" />
+                    </audio>
+                </td>
+            </tr>
+        </table>
+    </div>-->
+
                     </article>
                 </div>
                 <div>
