@@ -76,9 +76,85 @@
                     <!--display melody => program will specify note based on color result-->
                     <article>
                         <p><b>Melody:</b></p>
-                        <!--<label id="note1">Note 1: <span id="mnt1" onchange="displaySound(this)"></span></label><audio id="sound1output"></audio><br />
-    <label id="note2">Note 2: <span id="mnt2" onchange="displaySound(this)"></span></label><audio id="sound2output"></audio><br />
-    <label id="note3">Note 3: <span id="mnt3" onchange="displaySound(this)"></span></label><audio id="sound3output"></audio><br /><br />-->
+                        <label id="note1">Note 1: <span id="mnt1" onchange="displaySound(this)"></span></label><audio id="sound1output"></audio><br />
+                        <label id="note2">Note 2: <span id="mnt2" onchange="displaySound(this)"></span></label><audio id="sound2output"></audio><br />
+                        <label id="note3">Note 3: <span id="mnt3" onchange="displaySound(this)"></span></label><audio id="sound3output"></audio><br /><br />
+
+                        <div>
+                            <table>
+                                <tr>
+                                    <td>G, bass clef => </td>
+                                    <td>
+                                    <audio id="sound1" controls="controls">
+                                        <source src="g3grey.mp3" type="audio/mpeg" />
+                                    </audio>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>D, bass clef => </td>
+                                    <td>
+                                    <audio id="sound2" controls="controls">
+                                        <source src="d3black.mp3" type="audio/mpeg" />
+                                    </audio>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>B, bass clef => </td>
+                                    <td>
+                                        <audio id="sound3" controls="controls">
+                                            <source src="b3brown.mp3" type="audio/mpeg" />
+                                        </audio>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>F, bass clef => </td>
+                                    <td>
+                                        <audio id="sound4" controls="controls">
+                                            <source src="f3blue.mp3" type="audio/mpeg" />
+                                        </audio>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>G, treble clef => </td>
+                                    <td>
+                                        <audio id="sound5" controls="controls">
+                                            <source src="g5green.mp3" type="audio/mpeg" />
+                                        </audio>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>B, treble clef => </td>
+                                    <td>
+                                        <audio id="sound6" controls="controls">
+                                            <source src="b5orange.mp3" type="audio/mpeg" />
+                                        </audio>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>F, treble clef => </td>
+                                    <td>
+                                        <audio id="sound7" controls="controls">
+                                            <source src="f-5yellow.mp3" type="audio/mpeg" />
+                                        </audio>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>E, treble clef => </td>
+                                    <td>
+                                        <audio id="sound8" controls="controls">
+                                            <source src="e5violet.mp3" type="audio/mpeg" />
+                                        </audio>
+                                    </td>
+                                </tr>
+                            </table>    
+                        </div>
+                    </article>
+                </div>
+                
+                <!-- PHP to add more functionality, isn't being displayed by GitHub
+<article>
+                        <p><b>Melody:</b></p>
+                        
                         <?php
                         function displayNote($note){
                         switch($note){
@@ -145,78 +221,9 @@
                                 <tr><?php displayNote($note3) ?></tr>
                             </table>
                         </div>
-
-                        <!--<div>
-        <table>
-            <tr>
-                <td>G, bass clef => </td>
-                <td>
-                    <audio id="sound1" controls="controls">
-                        <source src="g3grey.mp3" type="audio/mpeg" />
-                    </audio>
-                </td>
-            </tr>
-            <tr>
-                <td>D, bass clef => </td>
-                <td>
-                    <audio id="sound2" controls="controls">
-                        <source src="d3black.mp3" type="audio/mpeg" />
-                    </audio>
-                </td>
-            </tr>
-            <tr>
-                <td>B, bass clef => </td>
-                <td>
-                    <audio id="sound3" controls="controls">
-                        <source src="b3brown.mp3" type="audio/mpeg" />
-                    </audio>
-                </td>
-            </tr>
-            <tr>
-                <td>F, bass clef => </td>
-                <td>
-                    <audio id="sound4" controls="controls">
-                        <source src="f3blue.mp3" type="audio/mpeg" />
-                    </audio>
-                </td>
-            </tr>
-            <tr>
-                <td>G, treble clef => </td>
-                <td>
-                    <audio id="sound5" controls="controls">
-                        <source src="g5green.mp3" type="audio/mpeg" />
-                    </audio>
-                </td>
-            </tr>
-            <tr>
-                <td>B, treble clef => </td>
-                <td>
-                    <audio id="sound6" controls="controls">
-                        <source src="b5orange.mp3" type="audio/mpeg" />
-                    </audio>
-                </td>
-            </tr>
-            <tr>
-                <td>F, treble clef => </td>
-                <td>
-                    <audio id="sound7" controls="controls">
-                        <source src="f-5yellow.mp3" type="audio/mpeg" />
-                    </audio>
-                </td>
-            </tr>
-            <tr>
-                <td>E, treble clef => </td>
-                <td>
-                    <audio id="sound8" controls="controls">
-                        <source src="e5violet.mp3" type="audio/mpeg" />
-                    </audio>
-                </td>
-            </tr>
-        </table>
-    </div>-->
-
-                    </article>
-                </div>
+</article>
+--!>
+                
                 <div>
                     <p>
                         <i>P.S. Color choice is based on psychoanalysis. We are not musicians, just in case...</i>
