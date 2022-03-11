@@ -23,24 +23,24 @@ video {
     height: 200px;
 }
 
-h1 {
+h2, h3 {
     font-family: American Typewriter;
     text-align: center;
     font-style: oblique;
     color: #eee2df;
 }
 
-h3 {
+/*h3 {
     text-align: center;
     font-style: oblique;
-}
+}*/
 
-h2 {
+/*h2 {
     font-family: American Typewriter;
     text-align: center;
     font-style: oblique;
     color: #bee3db;
-}
+}*/
 
 h4 {
     font-family: Gabriola;
