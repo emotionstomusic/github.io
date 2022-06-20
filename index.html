@@ -10,16 +10,14 @@
         <h2 id="title">
             Emotions to Music Project
         </h2>
-        <h3> Based on the use case of one of BTS members:<br/>
-        "I dream about a device that would convert emotions into music"<br/>
+        <h3>
+            Based on the use case of one of BTS members:<br/>
+            "I dream about a device that would convert emotions into music"
         </h3>
-
         <h4>
             Light Version of a Prototype<br />
             Not for commercial use<br />
         </h4>
-
-        <!-- column 1 -->
         <div id="wrap">
             <div id="left_col">
                 <p><b>Online Heart Rate Monitor, not to be used for medical purposes</b></p>
@@ -39,7 +37,6 @@
                         </p>
                     </div>
                 </div>
-
                 <!-- for web broser so that user could manually input the pulse number -->
                 <div id="alternativestart">
                     <article>
@@ -53,16 +50,12 @@
                         <input id="pulse3" type="number" style="width: 55px; height: 15px; border-radius: 3px;" value="0"><br />
                     </article>
                 </div>
-
-                <!--button to launch everything else, all the calculations and matching-->
                 <div>
                     <p></p>
                     <button id="match"><b>Match</b></button>
                     <p></p>
                 </div>
             </div>
-
-            <!-- column 2 -->
             <div id="right_col">
                 <div id="colorresult">
                     <!--display colors => program will specify color based on pulse result-->
@@ -73,7 +66,6 @@
                         <label id="color3">Color 3: <span id="cr3"></span></label><br />
                     </article>
                 </div>
-
                 <div id="melodyresult">
                     <!--display melody => program will specify note based on color result-->
                     <article>
@@ -81,7 +73,6 @@
                         <label id="note1">Note 1: <span id="mnt1" onchange="displaySound(this)"></span></label><audio id="sound1output"></audio><br />
                         <label id="note2">Note 2: <span id="mnt2" onchange="displaySound(this)"></span></label><audio id="sound2output"></audio><br />
                         <label id="note3">Note 3: <span id="mnt3" onchange="displaySound(this)"></span></label><audio id="sound3output"></audio><br /><br />
-
                         <div>
                             <table>
                                 <tr>
@@ -152,80 +143,6 @@
                         </div>
                     </article>
                 </div>
-                
-                <!-- PHP to add more functionality, isn't being displayed by GitHub
-<article>
-                        <p><b>Melody:</b></p>
-                        
-                        <?php
-                        function displayNote($note){
-                        switch($note){
-                        case "D, bass clef":
-                        echo "\nD, bass clef\n";
-                        <audio id="sound2" controls="controls">
-                            <source src="d3black.mp3" type="audio/mpeg" />
-                        </audio>
-                        break;
-                        case "G, bass clef":
-                        echo "\nG, bass clef\n";
-                        <audio id="sound1" controls="controls">
-                            <source src="g3grey.mp3" type="audio/mpeg" />
-                        </audio>
-                        break;
-                        case "B, bass clef":
-                        echo "\nB, bass clef\n";
-                        <audio id="sound3" controls="controls">
-                            <source src="b3brown.mp3" type="audio/mpeg" />
-                        </audio>
-                        break;
-                        case "F, bass clef":
-                        echo "\nF, bass clef\n";
-                        <audio id="sound4" controls="controls">
-                            <source src="f3blue.mp3" type="audio/mpeg" />
-                        </audio>
-                        break;
-                        case "G, treble clef":
-                        echo "\nG, treble clef\n";
-                        <audio id="sound5" controls="controls">
-                            <source src="g5green.mp3" type="audio/mpeg" />
-                        </audio>
-                        break;
-                        case "B, treble clef":
-                        echo "\nB, treble clef\n";
-                        <audio id="sound6" controls="controls">
-                            <source src="b5orange.mp3" type="audio/mpeg" />
-                        </audio>
-                        break;
-                        case "F, treble clef":
-                        echo "\nF, treble clef\n";
-                        <audio id="sound7" controls="controls">
-                            <source src="f-5yellow.mp3" type="audio/mpeg" />
-                        </audio>
-                        break;
-                        case "E, treble clef":
-                        echo "\nE, treble clef\n";
-                        <audio id="sound8" controls="controls">
-                            <source src="e5violet.mp3" type="audio/mpeg" />
-                        </audio>
-                        break;
-                        }
-                        }
-                        ?>
-
-                        <label id="note1" for="note1">Note 1: <span id="mnt1" onchange="displaySound(this)"></span></label><audio id="sound1output"></audio><br />
-                        <label id="note2" for="note2">Note 2: <span id="mnt2" onchange="displaySound(this)"></span></label><audio id="sound2output"></audio><br />
-                        <label id="note3" for="note3">Note 3: <span id="mnt3" onchange="displaySound(this)"></span></label><audio id="sound3output"></audio><br /><br />
-
-                        <div>
-                            <table>
-                                <tr><?php displayNote($note1) ?></tr>
-                                <tr><?php displayNote($note2) ?></tr>
-                                <tr><?php displayNote($note3) ?></tr>
-                            </table>
-                        </div>
-</article>
---!>
-                
                 <div>
                     <p>
                         <i>P.S. Color choice is based on psychoanalysis. We are not musicians, just in case...</i>
@@ -233,11 +150,9 @@
                 </div>
             </div>
         </div>
-
         <script src="colormelody.js"></script>
         <script src="modernizr.custom.05819.js"></script>
         <script src="OnlineHeartRateMonitor.js"></script>
-
         <footer id="footer">
             <br />
             <h5>
